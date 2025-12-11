@@ -83,4 +83,71 @@ a:hover { text-decoration:underline; }
   .hero h1 { font-size:3.5rem; }
   .hero p { font-size:1.2rem; }
   .about, .gallery, .contact { padding:80px 0; }
+}/* Креативное свечение и пульсация для имени */
+.name-glow {
+  font-family: 'Playfair Display', serif;
+  font-size: 6.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #ffffff, #ff6b6b, #4ecdc4, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255,107,107,0.5), 0 0 50px rgba(78,205,196,0.5);
+  animation: glow 3s ease-in-out infinite alternate, gradient-shift 6s ease infinite;
+  position: relative;
+  z-index: 1;
 }
+
+.subtitle-pulse {
+  font-size: 1.8rem;
+  letter-spacing: 6px;
+  color: #eee;
+  animation: pulse 2.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(255,107,107,0.3);
+}
+
+/* Анимации магии */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(255,107,107,0.4), 0 0 40px rgba(78,205,196,0.4);
+    transform: scale(1);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(255,107,107,0.8), 0 0 60px rgba(78,205,196,0.8), 0 0 80px rgba(255,107,107,0.3);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  from { 
+    opacity: 0.8; 
+    letter-spacing: 6px; 
+    text-shadow: 0 0 10px rgba(255,107,107,0.3); 
+  }
+  to { 
+    opacity: 1; 
+    letter-spacing: 8px; 
+    text-shadow: 0 0 20px rgba(255,107,107,0.6); 
+  }
+}
+
+/* Мобильная версия — чтобы не ломалось */
+@media (max-width: 768px) {
+  .name-glow { 
+    font-size: 4rem; 
+    letter-spacing: 2px; 
+  }
+  .subtitle-pulse { 
+    font-size: 1.3rem; 
+    letter-spacing: 4px; 
+  }
+}
+
