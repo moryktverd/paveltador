@@ -8,36 +8,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" data-aos="fade-down">
     <div class="hero-content">
       <h1>Pavel Tador</h1>
       <p>Художник | Живопись | Графика</p>
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" data-aos="fade-up">
     <div class="container">
-      <h2>О себе</h2>
-      <p>Я — современный художник, работаю с маслом, акрилом и смешанными техниками. 
-         В своих работах исследую темы памяти, времени и внутреннего мира человека. 
-         Выставлялся в Москве, Санкт-Петербурге и Берлине.</p>
+      <h2 data-aos="fade-up" data-aos-delay="200">О себе</h2>
+      <p data-aos="fade-up" data-aos-delay="300">
+        Я — современный художник, работаю с маслом, акрилом и смешанными техниками. 
+        В своих работах исследую темы памяти, времени и внутреннего мира человека. 
+        Выставлялся в Москве, Санкт-Петербурге и Берлине.
+      </p>
     </div>
   </section>
 
   <section class="gallery">
     <div class="container">
-      <h2>Работы</h2>
-      <div class="grid">
-        <img src="images/1.jpg" alt="Работа 1" />
-        <img src="images/2.jpg" alt="Работа 2" />
-        <img src="images/3.jpg" alt="Работа 3" />
-        <img src="images/4.jpg" alt="Работа 4" />
-        <img src="images/5.jpg" alt="Работа 5" />
-        <img src="images/6.jpg" alt="Работа 6" />
-        <img src="images/7.jpg" alt="Работа 7" />
-        <img src="images/8.jpg" alt="Работа 8" />
+      <h2 data-aos="fade-up" data-aos-delay="100">Работы</h2>
+      <div class="grid" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/1.jpg" alt="Работа 1" data-aos="zoom-in" data-aos-delay="100"/>
+        <img src="images/2.jpg" alt="Работа 2" data-aos="zoom-in" data-aos-delay="200"/>
+        <img src="images/3.jpg" alt="Работа 3" data-aos="zoom-in" data-aos-delay="300"/>
+        <img src="images/4.jpg" alt="Работа 4" data-aos="zoom-in" data-aos-delay="400"/>
+        <img src="images/5.jpg" alt="Работа 5" data-aos="zoom-in" data-aos-delay="500"/>
+        <img src="images/6.jpg" alt="Работа 6" data-aos="zoom-in" data-aos-delay="600"/>
+        <img src="images/7.jpg" alt="Работа 7" data-aos="zoom-in" data-aos-delay="700"/>
+        <img src="images/8.jpg" alt="Работа 8" data-aos="zoom-in" data-aos-delay="800"/>
+        <img src="images/9.jpg" alt="Работа 9" data-aos="zoom-in" data-aos-delay="900"/>
+        <img src="images/10.jpg" alt="Работа 10" data-aos="zoom-in" data-aos-delay="1000"/>
+        <img src="images/11.jpg" alt="Работа 11" data-aos="zoom-in" data-aos-delay="1100"/>
+        <img src="images/12.jpg" alt="Работа 12" data-aos="zoom-in" data-aos-delay="1200"/>
+        <img src="images/13.jpg" alt="Работа 13" data-aos="zoom-in" data-aos-delay="1300"/>
+        <img src="images/14.jpg" alt="Работа 14" data-aos="zoom-in" data-aos-delay="1400"/>
+        <img src="images/15.jpg" alt="Работа 15" data-aos="zoom-in" data-aos-delay="1500"/>
+        <img src="images/16.jpg" alt="Работа 16" data-aos="zoom-in" data-aos-delay="1600"/>
+        <!-- Добавляй сколько угодно дальше -->
       </div>
     </div>
   </section>
@@ -47,7 +61,7 @@
     <img src="" alt="" id="lightbox-img" />
   </div>
 
-  <footer class="contact">
+  <footer class="contact" data-aos="fade-up" data-aos-delay="200">
     <div class="container">
       <p>Связаться: <a href="mailto:pavel@tador.art">pavel@tador.art</a></p>
       <div class="social">
@@ -58,6 +72,15 @@
     </div>
   </footer>
 
+  <!-- AOS JS + инициализация -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
