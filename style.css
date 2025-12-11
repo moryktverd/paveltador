@@ -215,6 +215,38 @@ a:hover { text-decoration:underline; }
     font-size: 1.3rem; 
     letter-spacing: 4px; 
   }
+}/* Подписи — красиво на всех устройствах */
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  color: white;
+  padding: 40px 15px 15px;
+  transform: translateY(70%);
+  transition: transform 0.4s ease;
+  pointer-events: none;
+  text-align: center;
 }
+
+.grid-item:hover .caption,
+.grid-item:active .caption,
+.grid-item:focus .caption {
+  transform: translateY(0);
+}
+
+/* На мобиле — подписи всегда видны (или почти всегда) */
+@media (max-width: 768px) {
+  .caption {
+    transform: translateY(0);           /* всегда видно */
+    padding: 30px 10px 10px;
+    background: rgba(0,0,0,0.8);
+  }
+  .grid-item img {
+    opacity: 0.92;
+  }
+}
+
 
 
