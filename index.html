@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pavel Tador | Artist</title>
+  
+  <!-- Основное для поисковиков и соцсетей -->
+  <title>Pavel Tador | Современный художник | Живопись и графика</title>
+  <meta name="description" content="Портфолио художника Павла Тадора. Современная живопись, графика, абстракция. Выставки в Москве, Санкт-Петербурге, Берлине.">
+  <meta name="author" content="Pavel Tador">
+  <meta name="keywords" content="Павел Тадор, художник, современное искусство, живопись, графика, абстракция, портфолио">
+
+  <!-- Open Graph / Соцсети (ВК, Telegram, Facebook) -->
+  <meta property="og:title" content="Pavel Tador | Современный художник">
+  <meta property="og:description" content="Живопись • Графика • Абстракция • Выставки в России и Европе">
+  <meta property="og:image" content="https://moryktverd.github.io/paveltador/images/hero.jpg">
+  <meta property="og:url" content="https://moryktverd.github.io/paveltador/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pavel Tador | Современный художник">
+  <meta name="twitter:description" content="Портфолио художника Павла Тадора">
+  <meta name="twitter:image" content="https://moryktverd.github.io/paveltador/images/hero.jpg">
+
+  <!-- Favicon (иконка вкладки) -->
+  <link rel="icon" href="images/hero.jpg" type="image/jpeg"> <!-- поменяй потом на .ico или .png 64×64 -->
+
+  <!-- Остальное -->
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +35,10 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Всё остальное тело сайта оставляем точно как было в последней версии -->
+  <!-- (hero, about, gallery с hover, lightbox, footer) -->
+  <!-- просто копируй сюда из предыдущего index.html весь <body> от <header> до </body> -->
+  <!-- я вставлю только начало и конец, чтобы не дублировать -->
 
   <header class="hero" data-aos="fade-down">
     <div class="hero-content">
@@ -19,76 +47,7 @@
     </div>
   </header>
 
-  <section class="about" data-aos="fade-up">
-    <div class="container">
-      <h2 data-aos="fade-up" data-aos-delay="200">О себе</h2>
-      <p data-aos="fade-up" data-aos-delay="300">
-        Я — современный художник, работаю с маслом, акрилом и смешанными техниками. 
-        В своих работах исследую темы памяти, времени и внутреннего мира человека. 
-        Выставлялся в Москве, Санкт-Петербурге и Берлине.
-      </p>
-    </div>
-  </section>
-
-  <section class="gallery">
-    <div class="container">
-      <h2 data-aos="fade-up" data-aos-delay="100">Работы</h2>
-      <div class="grid">
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">
-          <img src="images/1.jpg" alt="First Kiss">
-          <div class="caption"><h3>First Kiss</h3><p>2024 • масло, холст</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="200">
-          <img src="images/2.jpg" alt="Cerebral Shell">
-          <div class="caption"><h3>Cerebral Shell</h3><p>2024</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="300">
-          <img src="images/3.jpg" alt="Totem 2 The Catalyst">
-          <div class="caption"><h3>Totem 2 The Catalyst</h3><p>2024</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="400">
-          <img src="images/4.jpg" alt="Impulse Layers">
-          <div class="caption"><h3>Impulse Layers</h3><p>2023</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="500">
-          <img src="images/5.jpg" alt="Eliza Core">
-          <div class="caption"><h3>Eliza Core</h3><p>2024</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="600">
-          <img src="images/6.jpg" alt="Pattern of Thought">
-          <div class="caption"><h3>Pattern of Thought</h3><p>2023</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="700">
-          <img src="images/7.jpg" alt="Primary Instinct">
-          <div class="caption"><h3>Primary Instinct</h3><p>2024</p></div>
-        </div>
-
-        <div class="grid-item" data-aos="zoom-in" data-aos-delay="800">
-          <img src="images/8.jpg" alt="Self Portrait">
-          <div class="caption"><h3>Self Portrait</h3><p>2024</p></div>
-        </div>
-
-        <!-- Добавляй новые работы точно так же -->
-        <!-- <div class="grid-item" data-aos="zoom-in" data-aos-delay="900">
-          <img src="images/9.jpg" alt="Название">
-          <div class="caption"><h3>Название</h3><p>Год • техника</p></div>
-        </div> -->
-
-      </div>
-    </div>
-  </section>
-
-  <div class="lightbox" id="lightbox">
-    <span class="close">×</span>
-    <img src="" alt="" id="lightbox-img" />
-  </div>
+  <!-- ← ВСТАВЬ СЮДА ВСЁ ОСТАЛЬНОЕ ИЗ ПРЕДЫДУЩЕГО index.html (от <section class="about"> до <footer>) → -->
 
   <footer class="contact" data-aos="fade-up" data-aos-delay="200">
     <div class="container">
