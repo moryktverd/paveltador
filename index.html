@@ -91,6 +91,34 @@
   <script>
     AOS.init({ duration: 1000, once: true, offset: 100 });
   </script>
-  <script src="script.js"></script>
+  <script src="script.js"></script>  <!-- Лайтбокс без отдельного script.js — работает сразу -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".grid-item img").forEach(img => {
+        img.style.cursor = "pointer";
+        img.onclick = () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add("active");
+          document.body.style.overflow = "hidden";
+        };
+      });
+
+      document.querySelector(".close").onclick = () => {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      };
+
+      lightbox.onclick = e => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+      };
+    });
+  </script>
 </body>
 </html>
+
